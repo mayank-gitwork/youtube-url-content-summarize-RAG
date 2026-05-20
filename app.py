@@ -40,7 +40,7 @@ body {
     color: white;
 }
 </style>
-""", unsafe_allow_html=True)
+""")
 
 generic_url=st.text_input("URL",label_visibility="collapsed")
 
