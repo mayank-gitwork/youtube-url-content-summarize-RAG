@@ -19,6 +19,21 @@ groq_api_key = os.getenv("GROQ_API_KEY")
 ##with st.sidebar:
 ##    groq_api_key=st.text_input("Groq API Key",value="",type="password")
 
+with st.sidebar:
+    st.title("⚙ Settings")
+
+    model = st.selectbox(
+       "Choose Model",
+       ["GPT-4o-mini", "Llama 3", "Gemini"]
+    )
+
+    summary_type = st.selectbox(
+       "Summary Style",
+       ["Detailed", "Bullet Points", "Interview Notes"]
+    )
+
+    temperature = st.slider("Creativity",0.0,1.0,0.3)
+
 generic_url=st.text_input("URL",label_visibility="collapsed")
 
 ## Gemma Model USsing Groq API
