@@ -33,6 +33,14 @@ with st.sidebar:
     )
 
     temperature = st.slider("Creativity",0.0,1.0,0.3)
+st.markdown("""
+<style>
+body {
+    background-color: #0E1117;
+    color: white;
+}
+</style>
+""", unsafe_allow_html=True)
 
 generic_url=st.text_input("URL",label_visibility="collapsed")
 
@@ -55,8 +63,7 @@ if st.button("Summarize the Content from YT or Website"):
 
     else:
         try:
-            with st.progress("Analyzing with AI..."):
-            ## with st.spinner("Waiting..."):
+            with st.spinner("Waiting..."):
                 ## loading the website or yt video data
                 if "youtube.com" in generic_url:
                     loader=YoutubeLoader.from_youtube_url(generic_url)  #,add_video_info=True
