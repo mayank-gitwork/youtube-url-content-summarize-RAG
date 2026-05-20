@@ -16,8 +16,8 @@ load_dotenv()
 groq_api_key = os.getenv("GROQ_API_KEY")
 
 ## Get the Groq API Key and url(YT or website)to be summarized
-with st.sidebar:
-    groq_api_key=st.text_input("Groq API Key",value="",type="password")
+##with st.sidebar:
+##    groq_api_key=st.text_input("Groq API Key",value="",type="password")
 
 generic_url=st.text_input("URL",label_visibility="collapsed")
 
