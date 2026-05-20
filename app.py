@@ -55,7 +55,7 @@ if st.button("Summarize the Content from YT or Website"):
 
     else:
         try:
-            with st.progress():
+            with st.progress("Analyzing..."):
             ## with st.spinner("Waiting..."):
                 ## loading the website or yt video data
                 if "youtube.com" in generic_url:
