@@ -33,14 +33,6 @@ with st.sidebar:
     )
 
     temperature = st.slider("Creativity",0.0,1.0,0.3)
-st.markdown("""
-<style>
-body {
-    background-color: #0E1117;
-    color: white;
-}
-</style>
-""")
 
 generic_url=st.text_input("URL",label_visibility="collapsed")
 
